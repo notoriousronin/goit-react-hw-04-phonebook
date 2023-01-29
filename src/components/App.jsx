@@ -43,11 +43,11 @@ export default function App() {
   };
 
   const deleteContact = id => {
-    setContacts(prevState => contacts.filter(contact => contact.id !== id));
+    setContacts(prevState => prevState.filter(contact => contact.id !== id));
   };
 
-  const changeFilter = value => {
-    setFilter(value);
+  const changeFilter = event => {
+    setFilter(event.currentTarget.value);
   };
 
   const getVisibleContacts = () => {
